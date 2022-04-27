@@ -7,13 +7,13 @@ $information = new LoginRegister();
 
 if (isset($_POST['create'])) {
     $data = array(
-        'firstName'         => $_POST['firstName'],
-        'middleName'        => isset($_POST['middleName']) ? $_POST['middleName'] : '',
-        'lastName'          => $_POST['lastName'],
-        'carModel'          => $_POST['carModel'],
-        'plateNumber'       => $_POST['plateNumber'],
-        'email'             => $_POST['email'],
-        'password'          => $_POST['password']
+        'firstName'         =>      $_POST['firstName'],
+        'middleName'        =>      isset($_POST['middleName']) ? $_POST['middleName'] : '',
+        'lastName'          =>      $_POST['lastName'],
+        'carModel'          =>      $_POST['carModel'],
+        'plateNumber'       =>      $_POST['plateNumber'],
+        'email'             =>      $_POST['email'],
+        'password'          =>      $_POST['password']
     );
 
     echo $information->registerAccount($data);
@@ -21,8 +21,8 @@ if (isset($_POST['create'])) {
 
 if (isset($_POST['login'])) {
     $data = array(
-        'email'             => $_POST['email'],
-        'password'          => $_POST['password']
+        'email'             =>      $_POST['email'],
+        'password'          =>      $_POST['password']
     );
 
     echo $information->loginAccount($data);
