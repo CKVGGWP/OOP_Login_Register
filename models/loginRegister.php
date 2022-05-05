@@ -24,9 +24,8 @@ class LoginRegister extends Database
 
     public function userInfo($id)
     {
-        $sql = "SELECT * FROM userdetails u 
-                LEFT JOIN cardetails c ON u.id = c.userID
-                WHERE u.id = :id";
+        $sql = "SELECT * FROM userdetails
+                WHERE id = :id";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(['id' => $id]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -76,25 +75,6 @@ class LoginRegister extends Database
             ':lastName'          => $data['lastName'],
             ':email'             => $data['email'],
             ':password'          => $data['password']
-        ));
-
-        $lastInsertId = $this->conn->lastInsertId();
-
-        if ($stmt->rowCount() > 0) {
-            return $this->insertCarDetails($lastInsertId, $data);
-        } else {
-            return 2;
-        }
-    }
-
-    private function insertCarDetails($lastID, $data)
-    {
-        $sql = "INSERT INTO cardetails (userID, carModel, plateNumber) VALUES (:userID, :carModel, :plateNumber)";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute(array(
-            ':userID'            => $lastID,
-            ':carModel'          => $data['carModel'],
-            ':plateNumber'       => $data['plateNumber']
         ));
 
         if ($stmt->rowCount() > 0) {

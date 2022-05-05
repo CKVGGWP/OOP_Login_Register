@@ -37,23 +37,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row my-2">
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="carModel" placeholder="Car Model">
-                                                <label for="carModel">Car Model</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="plateNumber" placeholder="Plate Number">
-                                                <label for="plateNumber">Plate Number</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12 col-12">
+                                    <div class="col-md-12 col-12 mt-2">
                                         <div class="form-floating mb-2">
                                             <input type="text" class="form-control" id="email" placeholder="Email">
                                             <label for="email">Email Address</label>

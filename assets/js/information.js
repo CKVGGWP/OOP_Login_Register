@@ -6,8 +6,6 @@ $("#register").on("submit", function (e) {
   let firstName = $("#firstName").val();
   let middleName = $("#middleName").val();
   let lastName = $("#lastName").val();
-  let carModel = $("#carModel").val();
-  let plateNumber = $("#plateNumber").val();
   let email = $("#email").val();
   let password = $("#password").val();
 
@@ -28,24 +26,6 @@ $("#register").on("submit", function (e) {
     }).then((result) => {
       lastName.focus();
       lastName.addClass("is-invalid");
-    });
-  } else if (carModel == "") {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Car Model is required!",
-    }).then((result) => {
-      carModel.focus();
-      carModel.addClass("is-invalid");
-    });
-  } else if (plateNumber == "") {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Plate Number is required!",
-    }).then((result) => {
-      plateNumber.focus();
-      plateNumber.addClass("is-invalid");
     });
   } else if (email == "") {
     Swal.fire({
@@ -87,8 +67,6 @@ $("#register").on("submit", function (e) {
         firstName: firstName,
         middleName: middleName,
         lastName: lastName,
-        carModel: carModel,
-        plateNumber: plateNumber,
         email: email,
         password: password,
         create: true,

@@ -10,8 +10,6 @@ if (isset($_POST['create'])) {
         'firstName'         => $_POST['firstName'],
         'middleName'        => isset($_POST['middleName']) ? $_POST['middleName'] : '',
         'lastName'          => $_POST['lastName'],
-        'carModel'          => $_POST['carModel'],
-        'plateNumber'       => $_POST['plateNumber'],
         'email'             => $_POST['email'],
         'password'          => $_POST['password']
     );

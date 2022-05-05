@@ -20,25 +20,6 @@
                                         <label for="email">Email</label>
                                     </div>
                                 </div>
-
-                                <div class="row mb-2">
-
-                                    <div class="col-md-6 mb-2">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" value="<?php echo $carModel; ?>" id="carModel" placeholder="Car Model" readonly>
-                                            <label for="carModel">Car Model</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-2">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" value="<?php echo $plateNumber; ?>" id="plateNumber" placeholder="Plate Number" readonly>
-                                            <label for="plateNumber">Plate Number</label>
-                                        </div>
-                                    </div>
-
-                                </div>
-
                                 <div class="col-12">
                                     <a href="controllers/signoutController.php" class="btn btn-danger rounded-pill w-100" id="logout">
                                         Logout
