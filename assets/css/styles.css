@@ -1,0 +1,7 @@
+#fullPage {
+    background: url(../../img/ship.jpg) no-repeat center center fixed #f6f9ff; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}

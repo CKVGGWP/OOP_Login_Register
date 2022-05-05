@@ -3,13 +3,15 @@
 
 <?php include('views/includes/head.php'); ?>
 
-<body>
+<body id="fullPage">
 
     <?php if (isset($_GET['title'])) : ?>
 
         <?php if ($_GET['title'] == "Register") : ?>
 
             <?php include('controllers/indexController.php'); ?>
+
+            <?php include('views/includes/header.php'); ?>
 
             <?php include('views/register/register.php'); ?>
 
@@ -28,6 +30,8 @@
     <?php else : ?>
 
         <?php include('controllers/indexController.php'); ?>
+
+        <?php include('views/includes/header.php'); ?>
 
         <?php include('views/login/login.php'); ?>
 
