@@ -19,8 +19,8 @@ if (isset($_POST['create'])) {
 
 if (isset($_POST['login'])) {
     $data = array(
-        'email'             => $_POST['email'],
-        'password'          => $_POST['password']
+        'email'             =>      $_POST['email'],
+        'password'          =>      $_POST['password']
     );
 
     echo $information->loginAccount($data);
